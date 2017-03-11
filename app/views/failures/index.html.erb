@@ -1,1 +1,8 @@
 <a href="failures/new">失敗を記録する</a>
+
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", "/users/sign_out", method: :delete %>
+<% else %>
+  <a href="/users/sign_in">Sign in</a>
+  <a href="/users/sign_up">Sign up</a>
+<% end %>

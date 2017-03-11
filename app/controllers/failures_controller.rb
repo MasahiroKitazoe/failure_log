@@ -1,5 +1,7 @@
 class FailuresController < ApplicationController
 
+before_action :authenticate_user!, except: :index
+
 def index
 end
 
@@ -21,9 +23,6 @@ def create_params
     :action,
     :prevention,
     :lesson
-    )
+    ).merge(user_id: current_user.id)
 end
 end
-
-# devise作成後にcreate_paramsの最後に追加する
-# .merge(user_id: current_user.id)
