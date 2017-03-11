@@ -1,0 +1,18 @@
+<%= form_for @failure do |f| %>
+  <%= f.label :概要 %>
+  <%= f.text_field :overview %><br>
+  <%= f.label :タイムライン %>
+  <%= f.text_field :timeline %><br>
+  <%= f.label :根本原因 %>
+  <%= f.text_field :cause %><br>
+  <%= f.label :影響と損害 %>
+  <%= f.text_field :damage %><br>
+  <%= f.label :すぐに問題を解決するための行動一式 %>
+  <%= f.text_field :action %><br>
+  <%= f.label :再発防止のための行動一式 %>
+  <%= f.text_field :prevention %><br>
+  <%= f.label :教訓 %>
+  <%= f.text_field :lesson %><br>
+  <%= f.submit "記録する" %>
+
+<% end %>
