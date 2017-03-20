@@ -7,54 +7,62 @@
   <a href="/users/sign_up">Sign up</a>
 <% end %>
 
-<header>
+<header style="background: url(images/header.jpg); background-size: cover; background-position: center; ">
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+            <h1>Failure Log</h1>
             <hr>
-            <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <h4>失敗からちゃんと学べてる？</h4>
+            <br><br><br>
+            <a href="failures/new" class="btn btn-primary btn-xl wow tada">失敗を記録する</a>
         </div>
     </div>
 </header>
 
-<section class="bg-primary" id="about">
+<section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Failure Logについて</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <i><img src="images/formats.png"></i>
+                        <h3>記録フォーマットを用意</h3>
+                        <p class="text-muted">失敗から効果的に学びが得られるよう、記録フォーマットを用意しています。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <i><img src="images/pencil.png"></i>
+                        <h3>失敗を数える</h3>
+                        <p class="text-muted">回数をカウントできるようになっています。どんな失敗を繰り返しやすいのか可視化できます。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <i><img src="images/email.png"></i>
+                        <h3>たまにメールでお知らせ</h3>
+                        <p class="text-muted">自分で練った再発防止策や、失敗から得た教訓をメールでリマインドすることができます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="bg-primary" style="background: url(images/header.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">We've got what you need!</h2>
-                <hr class="light">
-                <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                <a href="#" class="btn btn-default btn-xl">Get Started!</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<aside class="bg-dark">
-    <div class="container text-center">
-        <div class="call-to-action">
-            <h2>Free Download at Start Bootstrap!</h2>
-            <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-        </div>
-    </div>
-</aside>
-
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                <p>123-456-6789</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                <h2 class="section-heading">記録フォーマットについて</h2>
+                <hr>
+                <p>Failure Logでは、失敗を7つの項目で記録します。<br>①概要<br>②タイムライン<br>③根本原因<br>④影響と損害<br>⑤すぐに解決するための行動一式<br>⑥再発防止のための行動一式<br>⑦教訓<br>この項目は書籍『Team Geek』に記載されている、Googleのエンジニアチームが障害を記録する際のフォーマットです。</p>
+                <a href="failures/new" class="btn btn-default btn-xl">失敗を記録する</a>
             </div>
         </div>
     </div>
