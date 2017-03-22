@@ -12,30 +12,27 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand page-scroll" href="/">Failure Log</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#services">Services</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
+                <% if user_signed_in? %>
+                  <li>
+                    <%= link_to "失敗を記録する", "failures/new" %>
+                  </li>
+                  <li>
+                    <%= link_to "Sign Out", "/users/sign_out", method: :delete %>
+                  </li>
+                <% else %>
+                  <li>
+                    <a href="/users/sign_in">ログイン</a>
+                  </li>
+                  <li>
+                    <a href="/users/sign_up">新規登録</a>
+                  </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -43,8 +40,11 @@
     <!-- /.container-fluid -->
 </nav>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<!-- <% #TODO: フラッシュメッセージが必要ないときに幅を取られないように設定する %> -->
+<!--   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
+
+
 
 <%= yield %>
 
