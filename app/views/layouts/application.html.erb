@@ -20,12 +20,18 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
                   <li>
+                    <%= link_to "過去の失敗を見る", "failures/list" %>
+                  </li>
+                  <li>
                     <%= link_to "失敗を記録する", "failures/new" %>
                   </li>
                   <li>
                     <%= link_to "Sign Out", "/users/sign_out", method: :delete %>
                   </li>
                 <% else %>
+                  <li>
+                    <%= link_to "失敗を記録する", "failures/new" %>
+                  </li>
                   <li>
                     <a href="/users/sign_in">ログイン</a>
                   </li>

@@ -5,7 +5,12 @@ before_action :authenticate_user!, except: :index
 def index
 end
 
+def list
+  @failures = Failure.where(user_id: current_user.id)
+end
+
 def show
+  @falure = Failure.find_by(id: params[:id])
 end
 
 def new
