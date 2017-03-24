@@ -24,6 +24,8 @@ end
 private
 def create_params
   params.require(:failure).permit(
+    :title,
+    :date,
     :overview,
     :timeline,
     :cause,
