@@ -1,20 +1,36 @@
+<div class="container" id="forms">
 
+  <%= form_for @failure do |f| %>
+    <div class="form-group">
+      <%= f.label :概要 %><br>
+      <%= f.text_area :overview, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :タイムライン %><br>
+      <%= f.text_area :timeline, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :根本原因 %><br>
+      <%= f.text_area :cause, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :影響と損害 %><br>
+      <%= f.text_area :damage, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :同じ失敗をしてしまった場合に被害を最小限にとどめるための行動一式 %><br>
+      <%= f.text_area :action, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :再発防止のための行動一式 %><br>
+      <%= f.text_area :prevention, :size => "100x5" %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :教訓 %><br>
+      <%= f.text_area :lesson, :size => "100x5" %><br>
+    </div>
+    <%= f.submit "記録する", :class => "btn btn-primary" %>
 
-<%= form_for @failure do |f| %>
-  <%= f.label :概要 %>
-  <%= f.text_field :overview %><br>
-  <%= f.label :タイムライン %>
-  <%= f.text_field :timeline %><br>
-  <%= f.label :根本原因 %>
-  <%= f.text_field :cause %><br>
-  <%= f.label :影響と損害 %>
-  <%= f.text_field :damage %><br>
-  <%= f.label :すぐに問題を解決するための行動一式 %>
-  <%= f.text_field :action %><br>
-  <%= f.label :再発防止のための行動一式 %>
-  <%= f.text_field :prevention %><br>
-  <%= f.label :教訓 %>
-  <%= f.text_field :lesson %><br>
-  <%= f.submit "記録する" %>
+  <% end %>
 
-<% end %>
+</div>
