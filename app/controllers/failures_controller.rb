@@ -10,7 +10,7 @@ def list
 end
 
 def show
-  @falure = Failure.find_by(id: params[:id])
+  @failure = Failure.find(params[:id])
 end
 
 def new
